@@ -1,3 +1,4 @@
+package groovylearn
 
 class SimpleClass
 {
@@ -8,7 +9,7 @@ class SimpleClass
 	int computeSome(int x) 
 	{
 		Random random = new Random();
-		return (x*random.nextInt(10));
+		return (x * random.nextInt(10));
 	}
 
 }
