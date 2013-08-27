@@ -7,7 +7,8 @@ class Main {
 	private String testClass() {
 		
 		def sc = new SimpleClass()
-		def rndNumber = sc.computeSome(10);
+		sc.numberField = 10;
+		def rndNumber = sc.computeSome();
 		
 		return " SimpleClass Test => " + rndNumber
 		
@@ -48,7 +49,6 @@ class Main {
 		def output = " Maps Test => "
 		
 		// Define new map
-		
 		def newmap = [
 	
 			"Milan" : 1350000,
