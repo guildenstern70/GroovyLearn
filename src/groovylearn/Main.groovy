@@ -1,5 +1,7 @@
 package groovylearn
 
+import java.text.DecimalFormat
+
 class Main {
 	
 	private String testClass() {
@@ -34,6 +36,13 @@ class Main {
 		
 	}
 	
+	private String formatLargeNumber(int number) {
+		
+		def pattern1 = "###,###"
+		def formatter = new DecimalFormat(pattern1)
+		return formatter.format(number)
+	}
+	
 	private String testMaps() {
 		
 		def output = " Maps Test => "
@@ -42,17 +51,20 @@ class Main {
 		
 		def newmap = [
 	
-			"Milan" : 4500000,
-			"Paris" : 12000000,
-			"Rome"  : 8000000
+			"Milan" : 1350000,
+			"Paris" : 2234000,
+			"Rome"  : 2778000
 			
 			]
+		
+		// Add key-value pair
+		newmap["London"] = 8174000
 		
 		newmap.each {
 			k,v ->
 			output += k
 			output += " has "
-			output += v
+			output += this.formatLargeNumber(v)
 			output += " inhabitants, "
 			
 		}
