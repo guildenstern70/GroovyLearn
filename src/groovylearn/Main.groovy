@@ -1,22 +1,49 @@
+/*******************************************
+ * GroovyLearn Project
+ * Source
+ *******************************************/
+
 package groovylearn
 
 import java.text.DecimalFormat
 
-class Main {
+/**
+ * Groovy Learn Project
+ * Main Class
+ * @author Alessio Saltarin
+ */
+class Main 
+{
 	
-	private String testClass() {
+	private int doLoops() 
+	{
+		def sum = 0
+		def counter = 0
+		
+		0.upto(20) {
+			sum += (counter++)
+		}
+		
+		10.times {
+			sum += (counter++)
+		}
+		
+		sum
+	}
+	
+	private int doClass() 
+	{
 		
 		def sc = new SimpleClass()
-		sc.numberField = 10;
-		def rndNumber = sc.computeSome();
-		
-		return " SimpleClass Test => " + rndNumber
+		sc.numberField = 10;	
+		sc.computeSome();
 		
 	}
 	
-	private String testLists() {
+	private int doLists() 
+	{
 		
-		def output = " Lists Test => "
+		def sum = 0
 		
 		// Define new list
 		def newlist = [12, 13, 14, 15]
@@ -29,24 +56,25 @@ class Main {
 		
 		// Iterator (via closure)
 		newlist.each {
-			i ->
-			output += ("::" + i)
+			i -> sum += i
 		}
 		
-		return output
+		return sum
 		
 	}
 	
-	private String formatLargeNumber(int number) {
+	private String formatLargeNumber(int number) 
+	{
 		
 		def pattern1 = "###,###"
 		def formatter = new DecimalFormat(pattern1)
 		return formatter.format(number)
 	}
 	
-	private String testMaps() {
+	private String doMaps() 
+	{
 		
-		def output = " Maps Test => "
+		def totalPopulation = 0
 		
 		// Define new map
 		def newmap = [
@@ -62,27 +90,25 @@ class Main {
 		
 		newmap.each {
 			k,v ->
-			output += k
-			output += " has "
-			output += this.formatLargeNumber(v)
-			output += " inhabitants, "
-			
+			totalPopulation += v			
 		}
 		
-		return output[0..-3]
+		return this.formatLargeNumber(totalPopulation)
 		
 	}
 
-	static main(args) {
+	static main(args) 
+	{
 		
-		println "GroovyLearn v.0.1"
+		println "GroovyLearn v.0.2"
 		println "2013, Alessio Saltarin"
 		println ""
 		
 		Main m = new Main()
-		println m.testClass();
-		println m.testLists();
-		println m.testMaps();
+		println "  Do-Loops => " + m.doLoops()
+		println "  Class => " + m.doClass()
+		println "  Lists => " + m.doLists()
+		println "  Maps => " + m.doMaps()
 		
 		
 	}

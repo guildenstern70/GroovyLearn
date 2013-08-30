@@ -1,8 +1,13 @@
+/*******************************************
+ * GroovyLearn Project
+ * Source
+ *******************************************/
+
 package groovylearn
 
 /**
  * JavaBean-like class
- * @author Alessio
+ * @author Alessio Saltarin
  */
 class SimpleClass
 {
@@ -10,7 +15,8 @@ class SimpleClass
 	def numberField; // gets automatic getter and setter
 	final span; // gets automatic getter (not setter)
 	
-	SimpleClass() {
+	SimpleClass() 
+	{
 		this.span = 10;
 		this.numberField = 10;
 	}
@@ -20,8 +26,7 @@ class SimpleClass
 	 */
 	int computeSome() 
 	{
-		Random random = new Random();
-		return (this.numberField * random.nextInt(this.span));
+		return (this.numberField * this.span);
 	}
 
 }
