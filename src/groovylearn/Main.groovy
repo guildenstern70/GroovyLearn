@@ -96,10 +96,15 @@ class Main
 		return this.formatLargeNumber(totalPopulation)
 		
 	}
+	
+	private String doClosures()
+	{
+		def cl = new Closures()
+		cl.doAll();
+	}
 
 	static main(args) 
 	{
-		
 		println "GroovyLearn v.0.2"
 		println "2013, Alessio Saltarin"
 		println ""
@@ -109,8 +114,7 @@ class Main
 		println "  Class => " + m.doClass()
 		println "  Lists => " + m.doLists()
 		println "  Maps => " + m.doMaps()
-		
-		
+		println "  Closures => " + m.doClosures()
 	}
 
 }
