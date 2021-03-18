@@ -1,15 +1,20 @@
-apply plugin: 'groovy'
-apply plugin: 'application'
+plugins {
+	id 'groovy'
+	id 'application'
+}
 
-mainClassName = "groovylearn.Main"
+application {
+	mainClass = 'groovylearn.Main'
+}
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	compile localGroovy()
-	testCompile group: 'junit', name: 'junit', version: '4.+'
+	implementation 'org.codehaus.groovy:groovy-all:3.0.7'
+	testImplementation 'org.codehaus.groovy:groovy-all:3.0.7'
+	testImplementation 'junit:junit:4.+'
 } 
 
 sourceSets {

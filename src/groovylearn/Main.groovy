@@ -63,7 +63,7 @@ class Main
 		
 	}
 	
-	private String formatLargeNumber(int number) 
+	private static String formatLargeNumber(int number)
 	{
 		
 		def pattern1 = "###,###"
@@ -71,7 +71,7 @@ class Main
 		return formatter.format(number)
 	}
 	
-	private String doMaps() 
+	private static String doMaps()
 	{
 		
 		def totalPopulation = 0
