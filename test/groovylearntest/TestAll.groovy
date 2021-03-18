@@ -5,37 +5,35 @@
 
 package groovylearntest
 
-import groovylearn.Main
+import groovylearn.Files
+import groovylearn.Loops
 import groovylearn.Closures
+import groovylearn.SimpleClass
 
 class TestAll extends GroovyTestCase
 {
-	private Main mainClass
-	
-	void setUp()
-	{
-		this.mainClass = new Main()
-	}
-	
 	void testLoops()
 	{
-		assertEquals "Loop sum must be 465", this.mainClass.doLoops(), 465
+		assertEquals "Loop sum must be 465", Loops.doLoops(), 465
 	}
 	
 	void testClass()
 	{
-		assertEquals "Class computeSome() must return 100", this.mainClass.doClass(), 100
+		def sc = new SimpleClass()
+		sc.numberField = 10
+		assertEquals "Class computeSome() must return 100", sc.computeSome(), 100
 	}
 	
 	void testLists()
 	{
-		assertEquals "Lists must return 72", this.mainClass.doLists(), 72
+		int result = groovylearn.Collections.doLists()
+		assertEquals "Lists must return 72", result, 72
 	}
 	
 	void testMaps()
 	{
-		def popl = this.mainClass.doMaps()
-		assertEquals "Total population must be 14.536.000" , popl, "14.536.000"
+		String popl = groovylearn.Collections.doMaps()
+		assertEquals "Total population must be 14.536.000" , popl, "14,536,000"
 	}
 	
 	void testClosures()
@@ -44,4 +42,16 @@ class TestAll extends GroovyTestCase
 		assertEquals "SimpleSum must return 22", cl.simpleSum(), 22
 		assertEquals "SimpleProduct must return 28", cl.simpleProduct(), 28
 	}
+
+	void testFiles()
+	{
+		def files = [ 'FileOne.txt', 'FileTwo.txt', 'FileThree.txt']
+		Files.someFiles(files)
+		files.each {assertTrue(Files.fileExists(it))}
+		files.each {Files.replaceStringInFile(it, "two", "Pippo")}
+		files.each {Files.fileContains(it, 'Pippo')}
+		files.each {Files.fileDelete(it)}
+		files.each {Files.fileDelete(it + '.old')}
+	}
+
 }

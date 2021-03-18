@@ -1,4 +1,20 @@
 package groovylearn
 
-class Loops {
+class Loops
+{
+    static int doLoops()
+    {
+        def sum = 0
+        def counter = 0
+
+        0.upto(20) {
+            sum += (counter++)
+        }
+
+        10.times {
+            sum += (counter++)
+        }
+
+        sum
+    }
 }
