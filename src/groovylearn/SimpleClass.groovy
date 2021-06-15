@@ -19,13 +19,13 @@ package groovylearn
 class SimpleClass
 {
 	
-	def numberField; // gets automatic getter and setter
-	final span; // gets automatic getter (not setter)
+	def numberField // gets automatic getter and setter
+	final span // gets automatic getter (not setter)
 	
 	SimpleClass() 
 	{
-		this.span = 10;
-		this.numberField = 10;
+		this.span = 10
+		this.numberField = 10
 	}
 
 	/*
@@ -33,7 +33,7 @@ class SimpleClass
 	 */
 	int computeSome() 
 	{
-		return (this.numberField * this.span);
+		return (this.numberField * this.span)
 	}
 
 }

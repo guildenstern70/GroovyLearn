@@ -13,7 +13,14 @@ class Files
     static boolean fileContains(String fileName, String content)
     {
         def file = new File(fileName)
-        file.eachLine { if (it.contains(content)) return true }
+        file.eachLine {
+
+            if (it.contains(content))
+            {
+                return true
+            }
+
+        }
         return false
     }
 
@@ -56,11 +63,11 @@ class Files
             line two ===
             line three ===
         '''
-        fileNamesList.each {writeOneFile(it, aMultilineString)}
+        fileNamesList.each { writeOneFile(it, aMultilineString) }
     }
 
     static void someReplacements(List<String> fileNamesList)
     {
-        fileNamesList.each { replaceStringInFile(it, "two", "PIPPO") }
+        fileNamesList.each {  replaceStringInFile(it, "two", "PIPPO") }
     }
 }

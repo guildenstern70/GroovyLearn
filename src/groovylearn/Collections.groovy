@@ -48,7 +48,7 @@ class Collections
         newmap["London"] = 8174000
 
         newmap.each {
-            k,v ->
+            k, v ->
                 totalPopulation += v
         }
 

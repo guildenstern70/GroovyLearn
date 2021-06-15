@@ -9,7 +9,7 @@ package groovylearn
 
 class Closures
 {
-	static final aSimpleList = [ 2, 3, 4, 5 ]
+	static final SIMPLELIST = [2, 3, 4, 5 ]
 
 	// Return a list of ints, with each item trated by an 'operation'
 	// Operation: closure
@@ -31,7 +31,7 @@ class Closures
 
 	static int simpleSum()
 	{
-		simpleSum(aSimpleList)
+		simpleSum(SIMPLELIST)
 	}
 
 	static int simpleSum(aSimpleList)
@@ -41,7 +41,7 @@ class Closures
 
 	static int simpleProduct()
 	{
-		simpleProduct(aSimpleList)
+		simpleProduct(SIMPLELIST)
 	}
 
 	static int simpleProduct(aSimpleList)
@@ -51,8 +51,8 @@ class Closures
 
 	static String doAll()
 	{
-		def result = "Simple Sum Result = " + simpleSum(aSimpleList)
-		result += ", Simple Product Result = " + simpleProduct(aSimpleList)
+		def result = "Simple Sum Result = " + simpleSum(SIMPLELIST)
+		result += ", Simple Product Result = " + simpleProduct(SIMPLELIST)
 	}
 	
 
