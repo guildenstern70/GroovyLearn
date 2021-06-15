@@ -1,3 +1,10 @@
+/*
+ * GroovyLearn
+ * Copyright (c) Alessio Saltarin 2021.
+ * This software is licensed under MIT license.
+ * See LICENSE
+ */
+
 /*******************************************
  * GroovyLearn Project
  * Test Suite
@@ -27,7 +34,7 @@ class TestAll extends GroovyTestCase
 	void testLists()
 	{
 		int result = groovylearn.Collections.doLists()
-		assertEquals "Lists must return 72", result, 72
+		assertEquals "Lists must return 58", result, 58
 	}
 	
 	void testMaps()
@@ -48,10 +55,10 @@ class TestAll extends GroovyTestCase
 		def files = [ 'FileOne.txt', 'FileTwo.txt', 'FileThree.txt']
 		Files.someFiles(files)
 		files.each {assertTrue(Files.fileExists(it))}
-		files.each {Files.replaceStringInFile(it, "two", "Pippo")}
-		files.each {Files.fileContains(it, 'Pippo')}
-		files.each {Files.fileDelete(it)}
-		files.each {Files.fileDelete(it + '.old')}
+		files.each {Files.replaceStringInFile(it, "two", "Pippo") }
+		files.each {Files.fileContains(it, 'Pippo') }
+		files.each {Files.fileDelete(it) }
+		files.each {Files.fileDelete(it + '.old') }
 	}
 
 }

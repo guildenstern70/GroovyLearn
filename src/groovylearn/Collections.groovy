@@ -1,3 +1,10 @@
+/*
+ * GroovyLearn
+ * Copyright (c) Alessio Saltarin 2021.
+ * This software is licensed under MIT license.
+ * See LICENSE
+ */
+
 package groovylearn
 
 class Collections
@@ -14,7 +21,7 @@ class Collections
         def xc = newlist.size()
 
         // Add object
-        newlist.add(18)
+        newlist.add(xc)
 
         // Iterator (via closure)
         newlist.each {
@@ -32,11 +39,9 @@ class Collections
 
         // Define new map
         def newmap = [
-
                 "Milan" : 1350000,
                 "Paris" : 2234000,
                 "Rome"  : 2778000
-
         ]
 
         // Add key-value pair

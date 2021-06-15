@@ -1,7 +1,16 @@
+/*
+ * GroovyLearn
+ * Copyright (c) Alessio Saltarin 2021.
+ * This software is licensed under MIT license.
+ * See LICENSE
+ */
+
 package groovylearn
 
 class Closures
 {
+	static final aSimpleList = [ 2, 3, 4, 5 ]
+
 	// Return a list of ints, with each item trated by an 'operation'
 	// Operation: closure
 	static int results(listOfInts, operation)
@@ -12,17 +21,16 @@ class Closures
 
 	static int sumTwo(i)
 	{
-		i+=2
+		i += 2
 	}
 
 	static int productTwo(i)
 	{
-		i*=2
+		i *= 2
 	}
 
 	static int simpleSum()
 	{
-		def aSimpleList = [2,3,4,5]
 		simpleSum(aSimpleList)
 	}
 
@@ -33,7 +41,6 @@ class Closures
 
 	static int simpleProduct()
 	{
-		def aSimpleList = [2,3,4,5]
 		simpleProduct(aSimpleList)
 	}
 
@@ -44,7 +51,6 @@ class Closures
 
 	static String doAll()
 	{
-		def aSimpleList = [2,3,4,5] // sum = 14, sumTwo = 22, productTwo = 4+6+8+10 = 28
 		def result = "Simple Sum Result = " + simpleSum(aSimpleList)
 		result += ", Simple Product Result = " + simpleProduct(aSimpleList)
 	}

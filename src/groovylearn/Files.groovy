@@ -1,3 +1,10 @@
+/*
+ * GroovyLearn
+ * Copyright (c) Alessio Saltarin 2021.
+ * This software is licensed under MIT license.
+ * See LICENSE
+ */
+
 package groovylearn
 
 class Files
@@ -6,7 +13,7 @@ class Files
     static boolean fileContains(String fileName, String content)
     {
         def file = new File(fileName)
-        file.eachLine {if (it.contains(content)) return true}
+        file.eachLine { if (it.contains(content)) return true }
         return false
     }
 
@@ -42,7 +49,7 @@ class Files
         }
     }
 
-    static void someFiles(ArrayList<String> fileNamesList)
+    static void someFiles(List<String> fileNamesList)
     {
         def aMultilineString = '''
             line one ===
@@ -52,8 +59,8 @@ class Files
         fileNamesList.each {writeOneFile(it, aMultilineString)}
     }
 
-    static void someReplacements(ArrayList<String> fileNamesList)
+    static void someReplacements(List<String> fileNamesList)
     {
-        fileNamesList.each {replaceStringInFile(it, "two", "PIPPO")}
+        fileNamesList.each { replaceStringInFile(it, "two", "PIPPO") }
     }
 }

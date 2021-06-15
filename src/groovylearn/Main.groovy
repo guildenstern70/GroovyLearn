@@ -1,7 +1,9 @@
-/*******************************************
- * GroovyLearn Project
- * Source
- *******************************************/
+/*
+ * GroovyLearn
+ * Copyright (c) Alessio Saltarin 2021.
+ * This software is licensed under MIT license.
+ * See LICENSE
+ */
 
 package groovylearn
 
@@ -24,7 +26,5 @@ class Main
 		def files = [ 'FileOne.txt', 'FileTwo.txt', 'FileThree.txt']
 		Files.someFiles(files)
 		files.each {Files.replaceStringInFile(it, "two", "Pippo")}
-
 	}
-
 }
