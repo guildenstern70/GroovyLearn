@@ -1,6 +1,6 @@
 /*
  * GroovyLearn
- * Copyright (c) Alessio Saltarin 2021.
+ * Copyright (c) Alessio Saltarin 2022.
  * This software is licensed under MIT license.
  * See LICENSE
  */
@@ -19,21 +19,8 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.codehaus.groovy:groovy-all:3.0.7'
-	testImplementation 'org.codehaus.groovy:groovy-all:3.0.7'
+	implementation 'org.codehaus.groovy:groovy-all:3.0.9'
+	testImplementation 'org.codehaus.groovy:groovy-all:3.0.9'
 	testImplementation 'junit:junit:4.+'
 } 
 
-sourceSets {
-	main {
-		groovy {
-			srcDirs = ['src']
-		}
-	}
-
-	test {
-		groovy {
-			srcDirs = ['test']
-		}
-	}
-}

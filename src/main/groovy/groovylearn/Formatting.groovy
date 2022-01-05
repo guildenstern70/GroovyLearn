@@ -1,6 +1,6 @@
 /*
  * GroovyLearn
- * Copyright (c) Alessio Saltarin 2021.
+ * Copyright (c) Alessio Saltarin 2022.
  * This software is licensed under MIT license.
  * See LICENSE
  */
