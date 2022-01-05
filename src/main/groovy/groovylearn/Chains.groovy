@@ -15,7 +15,9 @@ class Taste
     def tastes(boolean good)
     {
         if (good)
+        {
             return "is good"
+        }
 
         return "is not good"
     }
@@ -29,7 +31,9 @@ class Cocktail
     {
         def isGood = false
         if (this.name == "Margarita")
+        {
             isGood = true
+        }
         return new Taste(isGood: isGood)
     }
 

@@ -7,10 +7,10 @@
 
 package groovylearn
 
-import org.junit.Test
-
 import static groovy.test.GroovyAssert.assertEquals
 import static groovy.test.GroovyAssert.assertTrue
+
+import org.junit.Test
 
 class TestAll
 {

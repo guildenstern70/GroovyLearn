@@ -12,7 +12,7 @@ package groovylearn
  */
 class TypesOrNot
 {
-    static def withoutTypes(thisShouldBeAString)
+    static withoutTypes(thisShouldBeAString)
     {
         return thisShouldBeAString.length()
     }
